@@ -1,0 +1,12 @@
+<h1>Homes#index</h1>
+<p>Find me in app/views/homes/index.html.erb</p>
+
+<%= form_tag('/homes/second') do %>
+    <div>
+        <%= text_field_tag 'currency_name' %>
+        <%= submit_tag 'send' %>
+        {order_currency} = 주문 통화(코인), ALL(전체), 기본값 : BTC
+    </div>
+<% end %>
+<hr>
+<%= link_to "24시간 최대상승코인 5개 찾기", homes_third_path %>

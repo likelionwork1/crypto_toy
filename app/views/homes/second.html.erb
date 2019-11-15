@@ -1,0 +1,19 @@
+<h1>Homes#second</h1>
+<p>Find me in app/views/homes/second.html.erb</p>
+
+<div>
+    <div> 코인명 / 현재가격 / 거래대금 </div>
+    <hr>
+    <%= @result %>
+    <% @result.each do |cur| %>
+        <% if cur[0] != "date" %>
+            <%= cur[0] %> / 
+            <%= cur[-1]["closing_price"] %> /
+            <%= cur[-1]["acc_trade_value_24H"] %> /
+            <%= cur[-1]["fluctate_rate_24H"] %> <br>
+        <% end %>
+    <% end %>
+</div>
+
+<hr>
+<%= link_to "돌아가기", root_path %>
